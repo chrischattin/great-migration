@@ -26,7 +26,7 @@ class GreatMigration
   end
 
   def default_options
-    { :per_page => 10000 }
+    { :per_page => 100000 }
   end
 
   def copy
