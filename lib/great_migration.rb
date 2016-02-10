@@ -26,7 +26,7 @@ class GreatMigration
   end
 
   def default_options
-    { :per_page => 100000 }
+    { :per_page => 10000 }
   end
 
   def copy
@@ -59,7 +59,7 @@ class GreatMigration
   private def copy_files(page, files)
     puts "  [#{Process.pid}] Page #{page+1}: Copying #{files.size} files..."
     total = files.size
-    max_processes = 8
+    max_processes = 4
     process_pids = {}
     time = Time.now
 
